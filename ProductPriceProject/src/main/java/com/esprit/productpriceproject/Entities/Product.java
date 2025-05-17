@@ -3,22 +3,22 @@ package com.esprit.productpriceproject.Entities;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
+import org.springframework.stereotype.Indexed;
+
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class Product {
     @Id
-    private Long id;
-    private String name;
-    private String description;
-
+    @Setter(AccessLevel.MODULE)
+    String id;
+    String name;
+    String description;
     String priceId;
 
 
