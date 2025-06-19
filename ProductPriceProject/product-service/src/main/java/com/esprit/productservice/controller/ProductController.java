@@ -2,9 +2,11 @@ package com.esprit.productservice.controller;
 
 
 import com.esprit.productservice.DTO.ProductDTO;
+import com.esprit.productservice.kafka.ProductProducer;
 import com.esprit.productservice.services.IProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -13,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 public class ProductController {
 
     private final IProductService productService;
-//
+    private final ProductProducer productProducer;
 //    @PostMapping
 //    public ProductDTO add(@RequestBody ProductDTO productDto) {
 //        return productService.add(productDto);
@@ -41,4 +43,10 @@ public class ProductController {
 //    public ProductDTO getProductByName(@PathVariable String name){
 //        return productService.getProductByName(name);
 //    }
+
+    @PostMapping("/send")
+    public ResponseEntity<String> sendProduct(@RequestBody ProductDTO productDTO) {
+        productProducer.sendProductCreatedEvent(productDTO);
+        return ResponseEntity.ok("Product sent to Kafka");
+    }
 }
