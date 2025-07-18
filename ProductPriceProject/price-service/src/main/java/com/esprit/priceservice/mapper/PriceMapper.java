@@ -1,6 +1,6 @@
 package com.esprit.priceservice.mapper;
 
-import com.esprit.priceservice.DTO.PriceDTO;
+import com.esprit.DTO.PriceDTO;
 import com.esprit.priceservice.entities.Price;
 import org.mapstruct.Mapper;
 

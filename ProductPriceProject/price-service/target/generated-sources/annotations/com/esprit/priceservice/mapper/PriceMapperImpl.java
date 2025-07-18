@@ -1,13 +1,13 @@
 package com.esprit.priceservice.mapper;
 
-import com.esprit.priceservice.DTO.PriceDTO;
+import com.esprit.DTO.PriceDTO;
 import com.esprit.priceservice.entities.Price;
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-06-17T21:38:51+0100",
+    date = "2025-07-18T15:03:42+0100",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.3.1 (Oracle Corporation)"
 )
 @Component

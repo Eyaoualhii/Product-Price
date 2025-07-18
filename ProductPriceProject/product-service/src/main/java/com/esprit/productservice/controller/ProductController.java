@@ -1,11 +1,10 @@
 package com.esprit.productservice.controller;
 
 
-import com.esprit.productservice.DTO.ProductDTO;
+import com.esprit.DTO.ProductDTO;
 import com.esprit.productservice.kafka.ProductProducer;
 import com.esprit.productservice.services.IProductService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

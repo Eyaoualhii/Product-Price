@@ -1,6 +1,6 @@
 package com.esprit.productservice.kafka;
 
-import com.esprit.productservice.DTO.ProductDTO;
+import com.esprit.DTO.ProductDTO;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 public class ProductProducer {
 
     private final KafkaTemplate<String, String> kafkaTemplate;
+    private final KafkaTemplate<String, ProductEvent> kafkaProductEventTemplate;
     private final ObjectMapper objectMapper;
 
     public void sendProductCreatedEvent(ProductDTO productDTO) {
@@ -21,6 +22,10 @@ public class ProductProducer {
         } catch (JsonProcessingException e) {
             throw new RuntimeException("Error serializing product", e);
         }
+    }
+    // with object
+    public void sendProductCreatedEventAsObject(ProductEvent productEvent) {
+        kafkaProductEventTemplate.send("product-topic", productEvent);
     }
 }
 

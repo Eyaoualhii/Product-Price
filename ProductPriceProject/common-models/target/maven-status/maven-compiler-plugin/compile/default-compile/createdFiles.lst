@@ -1,0 +1,4 @@
+com\esprit\Main.class
+com\esprit\ProductEvent.class
+com\esprit\DTO\PriceDTO.class
+com\esprit\DTO\ProductDTO.class

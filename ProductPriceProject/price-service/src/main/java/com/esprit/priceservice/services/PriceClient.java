@@ -1,6 +1,6 @@
 package com.esprit.priceservice.services;
 
-import com.esprit.priceservice.DTO.PriceDTO;
+import com.esprit.DTO.PriceDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -1,8 +1,7 @@
 package com.esprit.productservice.services;
 
 
-import com.esprit.productservice.DTO.ProductDTO;
-import org.springframework.data.domain.Page;
+import com.esprit.DTO.ProductDTO;
 
 public interface IProductService {
     ProductDTO getProduct(String id);

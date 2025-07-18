@@ -11,21 +11,18 @@
     <groupId>com.esprit</groupId>
     <artifactId>product-price-project</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>product-price-project</name>
-    <description>product-price-project</description>
-    <url/>
-    <licenses>
-        <license/>
-    </licenses>
-    <developers>
-        <developer/>
-    </developers>
-    <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>
+
+    <modules>
+        <module>common-models</module>
+        <module>config-server</module>
+        <module>eureka-server</module>
+        <module>gateway-service</module>
+        <module>price-service</module>
+        <module>product-service</module>
+    </modules>
+
     <properties>
         <java.version>17</java.version>
     </properties>

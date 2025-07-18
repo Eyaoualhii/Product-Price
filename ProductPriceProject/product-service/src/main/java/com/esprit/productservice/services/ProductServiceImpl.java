@@ -1,8 +1,8 @@
 package com.esprit.productservice.services;
 
-import com.esprit.priceservice.DTO.PriceDTO;
+import com.esprit.DTO.PriceDTO;
 import com.esprit.priceservice.services.PriceClient;
-import com.esprit.productservice.DTO.ProductDTO;
+import com.esprit.DTO.ProductDTO;
 import com.esprit.productservice.entities.Product;
 import com.esprit.productservice.mapper.ProductMapper;
 import com.esprit.productservice.repository.ProductRepository;
@@ -10,7 +10,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
-import java.util.logging.Logger;
 
 @Service
 @RequiredArgsConstructor
